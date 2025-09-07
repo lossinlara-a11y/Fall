@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #002E6D; /* Europol Blau */
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+h1, h2 {
+  color: #FFD700; /* Europol Gelb */
+}
+
+.button, button {
+  background-color: #FFD700;
+  color: #002E6D;
+  padding: 10px 20px;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover, button:hover {
+  background-color: white;
+}

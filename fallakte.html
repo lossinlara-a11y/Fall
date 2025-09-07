@@ -1,0 +1,37 @@
+<script>
+  const hints = {
+    "qr1": "E-Mail: Einladung zu einem 'lukrativen Job' in Deutschland von der GlobalWork GmbH.",
+    "qr2": "Flugticket: Sofia → Berlin, bezahlt von der Firma GlobalWork GmbH.",
+    "qr3": "WhatsApp-Nachricht von Elena: 'Sie wollen meinen Pass behalten…'",
+    "qr4": "Mietvertrag: Lagerhalle am Stadtrand von Berlin, angemietet auf GlobalWork GmbH.",
+    "qr5": "Banküberweisung: Mehrere Zahlungen von GlobalWork GmbH an Firmen in den Niederlanden.",
+    "qr6": "Polizeibericht: Firmenchef Viktor Ivanov war bereits in Spanien in Menschenhandel verwickelt.",
+    "qr7": "Zeugenaussage: Ein Nachbar sah Elena in Begleitung von zwei Männern in einen Transporter steigen.",
+    "qr8": "EU-Dokument: GlobalWork GmbH wird als Strohfirma eingestuft, eng verbunden mit kriminellen Netzwerken in Osteuropa."
+  };
+
+  function addHint() {
+    let code = document.getElementById("hintInput").value;
+    if(hints[code]) {
+      let li = document.createElement("li");
+      li.textContent = hints[code];
+      document.getElementById("hintList").appendChild(li);
+      document.getElementById("hintInput").value = "";
+    } else {
+      alert("Ungültiger Code. Versuche es mit qr1 bis qr8.");
+    }
+  }
+
+  function showTip() {
+    document.getElementById("tip").style.display = "block";
+  }
+
+  function checkSolution() {
+    let answer = document.getElementById("solution").value.trim().toLowerCase();
+    if(answer === "viktor ivanov") {
+      window.location.href = "erfolg.html";
+    } else {
+      document.getElementById("feedback").textContent = "Falsch! Versuch es nochmal.";
+    }
+  }
+</script>
